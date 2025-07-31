@@ -21,14 +21,17 @@ function showPage(pageName) {
 
 // Splah Screen Logic
 window.addEventListener('load', () => {
-    const splashScreen = document,getElementById('splash-screen');
+    const splashScreen = document.getElementById('splash-screen');
+    if (splashScreen) {
 
 
     // Hide splah screen after 1.5 seconds
     setTimeout(() => {
         splashScreen.classList.add('hidden');
-    }, 1500); // 1500ms = 1.5 seconds
-});    
+    }, 1500); 
+} else {
+        console.error('splash screen element not found!')
+}
     
 document.addEventListener('DOMContentLoaded', function() {
     // Menu filter buttons
